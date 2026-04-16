@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Task Manager - Settings</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="app-layout">
+  <aside class="sidebar">
+    <div>
+      <div class="logo-section">
+        <div class="logo-icon">🎓</div>
+        <div>
+          <h1 class="logo-title">Task Manager</h1>
+          <p class="logo-subtitle">Student Edition</p>
+        </div>
+      </div>
+
+      <div class="user-card">
+        <div class="avatar">S</div>
+        <div>
+          <p class="user-name" id="displayUsername">Student User</p>
+          <p class="user-email">student@example.com</p>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-item">Dashboard</a>
+        <a href="tasks.html" class="nav-item">Tasks</a>
+        <a href="calendar.html" class="nav-item">Calendar</a>
+        <a href="settings.html" class="nav-item active">Settings</a>
+      </nav>
+    </div>
+
+    <div class="logout-section">
+      <a href="#" class="nav-item">Logout</a>
+    </div>
+  </aside>
+
+  <div class="main-area">
+    <header class="topbar">
+      <div>
+        <h2 class="date-title">Wednesday, April 8, 2026</h2>
+        <p class="date-subtitle">Stay on top of your deadlines</p>
+      </div>
+      <div class="notification">🔔</div>
+    </header>
+
+    <main class="content">
+      <section class="page-header">
+        <div>
+          <h1>Settings</h1>
+          <p>Manage your account and preferences</p>
+        </div>
+      </section>
+
+      <section class="settings-stack">
+        <div class="settings-card">
+          <div class="settings-card-header">
+            <div class="settings-icon profile-icon">👤</div>
+            <h2>Profile Information</h2>
+          </div>
+
+          <div class="settings-form-group">
+            <label for="studentName">Name</label>
+            <input id="studentName" type="text" value="Student User" readonly />
+          </div>
+
+          <div class="settings-form-group">
+            <label for="studentEmail">Email</label>
+            <input id="studentEmail" type="email" value="student@example.com" readonly />
+          </div>
+        </div>
+
+        <div class="settings-card">
+          <div class="settings-card-header">
+            <div class="settings-icon notification-icon">🔔</div>
+            <h2>Notifications</h2>
+          </div>
+
+          <div class="settings-option-row">
+            <div>
+              <h3>Push Notifications</h3>
+              <p>Receive notifications about upcoming deadlines</p>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" checked />
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+
+          <div class="settings-option-row">
+            <div>
+              <h3>Email Reminders</h3>
+              <p>Get email reminders for tasks due soon</p>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" checked />
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="settings-card">
+          <div class="settings-card-header">
+            <div class="settings-icon appearance-icon">🎨</div>
+            <h2>Appearance</h2>
+          </div>
+
+          <div class="settings-box">
+            <h3>Theme</h3>
+            <p id="themeStatusText">Currently using light mode</p>
+            <button class="secondary-btn" id="themeToggleBtn" type="button">
+              Switch to Dark Mode
+            </button>
+          </div>
+        </div>
+
+        <div class="settings-card">
+          <div class="settings-card-header">
+            <div class="settings-icon data-icon">💾</div>
+            <h2>Data Management</h2>
+          </div>
+
+          <div class="settings-box">
+            <h3>Export Data</h3>
+            <p>Download all your tasks as a JSON file</p>
+            <button class="primary-btn small-btn" id="exportBtn" type="button">Export All Tasks</button>
+          </div>
+
+          <div class="settings-box danger-box">
+            <h3>Clear All Data</h3>
+            <p>This will permanently delete all your tasks and settings. This action cannot be undone.</p>
+            <button class="danger-btn" id="clearDataBtn" type="button">Clear All Data</button>
+          </div>
+        </div>
+
+        <div class="settings-card">
+          <div class="settings-card-header">
+            <div class="settings-icon about-icon">ℹ️</div>
+            <h2>About</h2>
+          </div>
+
+          <div class="settings-box">
+            <p>Student Task Manager v1.0.0</p>
+            <p>Built with HTML, CSS, JavaScript, Node.js, and MongoDB</p>
+            <p>© 2026 Student Task Manager. All rights reserved.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

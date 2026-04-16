@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Task Manager - Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="app-layout">
+  <aside class="sidebar">
+    <div>
+      <div class="logo-section">
+        <div class="logo-icon">🎓</div>
+        <div>
+          <h1 class="logo-title">Task Manager</h1>
+          <p class="logo-subtitle">Student Edition</p>
+        </div>
+      </div>
+
+      <div class="user-card">
+        <div class="avatar">S</div>
+        <div>
+          <p class="user-name" id="displayUsername">Student User</p>
+          <p class="user-email">student@example.com</p>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-item active">Dashboard</a>
+        <a href="tasks.html" class="nav-item">Tasks</a>
+        <a href="calendar.html" class="nav-item">Calendar</a>
+        <a href="settings.html" class="nav-item">Settings</a>
+      </nav>
+    </div>
+
+    <div class="logout-section">
+      <a href="#" class="nav-item">Logout</a>
+    </div>
+  </aside>
+
+  <div class="main-area">
+    <header class="topbar">
+      <div>
+        <h2 class="date-title">Wednesday, April 8, 2026</h2>
+        <p class="date-subtitle">Stay on top of your deadlines</p>
+      </div>
+      <div class="notification">🔔</div>
+    </header>
+
+    <main class="content">
+      <section class="page-header">
+        <div>
+          <h1>Dashboard</h1>
+          <p>Welcome back! Here's your task overview</p>
+        </div>
+        <a href="tasks.html" class="primary-btn link-btn">+ Create Task</a>
+      </section>
+
+      <section class="stats-grid">
+        <div class="stat-card">
+          <p>Total Tasks</p>
+          <h2 id="dashboardTotalTasks">0</h2>
+        </div>
+        <div class="stat-card">
+          <p>In Progress</p>
+          <h2 id="dashboardInProgressTasks">0</h2>
+        </div>
+        <div class="stat-card">
+          <p>Completed</p>
+          <h2 id="dashboardCompletedTasks">0</h2>
+        </div>
+      </section>
+
+      <section class="progress-card">
+        <div class="progress-header">
+          <div>
+            <h3>Overall Progress</h3>
+            <p id="dashboardProgressText">0 of 0 tasks completed</p>
+          </div>
+          <h2 id="dashboardProgressPercent">0%</h2>
+        </div>
+
+        <div class="progress-bar">
+          <div class="progress-fill" id="dashboardProgressFill" style="width: 0%;"></div>
+        </div>
+
+        <div class="status-summary">
+          <div class="summary-box pending" id="dashboardPendingSummary">0 Pending</div>
+          <div class="summary-box progress" id="dashboardInProgressSummary">0 In Progress</div>
+          <div class="summary-box completed" id="dashboardCompletedSummary">0 Completed</div>
+        </div>
+      </section>
+
+      <section class="task-section">
+        <h2>Upcoming Deadlines (Next 7 Days)</h2>
+
+        <div class="task-grid" id="dashboardUpcomingTasks"></div>
+      </section>
+    </main>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
