@@ -11,6 +11,88 @@ body {
     overflow: hidden;
 }
 
+.login-page {
+    min-height: 100vh;
+    overflow: auto;
+    background:
+        radial-gradient(circle at top left, rgba(109, 93, 252, 0.16), transparent 32%),
+        radial-gradient(circle at bottom right, rgba(147, 51, 234, 0.18), transparent 30%),
+        linear-gradient(180deg, #f5f7ff 0%, #eef2ff 100%);
+}
+
+.login-shell {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 20px;
+}
+
+.login-panel {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.login-card {
+    width: min(100%, 420px);
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid rgba(209, 213, 219, 0.9);
+    border-radius: 28px;
+    padding: 32px 28px;
+    box-shadow: 0 22px 60px rgba(15, 23, 42, 0.12);
+    backdrop-filter: blur(14px);
+}
+
+.login-card-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.login-title {
+    font-size: 34px;
+}
+
+.login-copy {
+    color: #4b5563;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.login-form label {
+    font-weight: 600;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 16px 18px;
+    border-radius: 16px;
+    border: 1px solid #d1d5db;
+    background: rgba(249, 250, 251, 0.95);
+    font-size: 18px;
+    color: #1f2937;
+}
+
+.login-form input:focus {
+    outline: none;
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.14);
+}
+
+.login-submit-btn {
+    width: 100%;
+    margin-top: 8px;
+}
+
 .app-layout {
     display: flex;
     height: 100vh;
@@ -854,6 +936,10 @@ body {
 
 /* Responsive */
 @media (max-width: 1200px) {
+    .login-shell {
+        padding: 28px 16px;
+    }
+
     .tasks-layout {
         grid-template-columns: 1fr;
     }
@@ -884,6 +970,18 @@ body {
 }
 
 @media (max-width: 768px) {
+    .login-shell {
+        padding: 20px 14px;
+    }
+
+    .login-card {
+        padding: 24px 20px;
+    }
+
+    .login-title {
+        font-size: 28px;
+    }
+
     .sidebar {
         width: 200px;
     }

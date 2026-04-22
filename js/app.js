@@ -78,22 +78,34 @@ function saveTasks(tasks) {
 ========================= */
 
 function initializeLoginPage() {
+    const loginForm = document.getElementById("loginForm");
     const loginBtn = document.getElementById("loginBtn");
-    const usernameInput = document.getElementById("usernameInput");
+    const accountInput = document.getElementById("accountInput");
+    const passwordInput = document.getElementById("passwordInput");
 
-    if (!loginBtn || !usernameInput) {
+    if (!loginForm || !loginBtn || !accountInput || !passwordInput) {
         return;
     }
 
-    loginBtn.addEventListener("click", () => {
-        const username = usernameInput.value.trim();
+    loginForm.addEventListener("submit", (event) => {
+        event.preventDefault();
 
-        if (!username) {
-            alert("Please enter your name.");
+        const account = accountInput.value.trim();
+        const password = passwordInput.value.trim();
+
+        if (!account) {
+            alert("Please enter your account.");
+            accountInput.focus();
             return;
         }
 
-        localStorage.setItem("username", username);
+        if (!password) {
+            alert("Please enter your password.");
+            passwordInput.focus();
+            return;
+        }
+
+        localStorage.setItem("username", account);
         window.location.href = "index.html";
     });
 }
