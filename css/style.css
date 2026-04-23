@@ -93,6 +93,23 @@ body {
     margin-top: 8px;
 }
 
+.auth-switch-text {
+    margin-top: 18px;
+    text-align: center;
+    color: #4b5563;
+    font-size: 15px;
+}
+
+.auth-switch-link {
+    color: #6d5dfc;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.auth-switch-link:hover {
+    text-decoration: underline;
+}
+
 .app-layout {
     display: flex;
     height: 100vh;
